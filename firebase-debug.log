@@ -1,0 +1,21 @@
+[debug] [2024-04-09T22:01:52.892Z] ----------------------------------------------------------------------
+[debug] [2024-04-09T22:01:52.895Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Home\Documents\AAParrots\parrots\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-04-09T22:01:52.895Z] CLI Version:   13.7.1
+[debug] [2024-04-09T22:01:52.895Z] Platform:      win32
+[debug] [2024-04-09T22:01:52.895Z] Node Version:  v20.11.1
+[debug] [2024-04-09T22:01:52.896Z] Time:          Wed Apr 10 2024 00:01:52 GMT+0200 (hora de verano de Europa central)
+[debug] [2024-04-09T22:01:52.896Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-09T22:01:52.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-09T22:01:52.904Z] > authorizing via signed-in user (isadri35@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Home\Documents\AAParrots\parrots
+
