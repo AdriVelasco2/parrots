@@ -21,7 +21,6 @@
     "axios": "^1.6.8",
     "clsx": "^2.1.0",
     "express": "^4.19.2",
-    "firebase-tools": "^13.7.1",
     "framer-motion": "^11.0.21",
     "next": "^14.1.4",
     "nodemailer": "^6.9.13",
