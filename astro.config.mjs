@@ -1,17 +1,15 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-
 import react from "@astrojs/react";
-
 import express from 'express';
 import { createTransport } from 'nodemailer';
-
+import netlify from "@astrojs/netlify";
 const app = express();
-
 app.use(express.json());
-
 app.post('/enviar-correo', async (req, res) => {
-  const { correo } = req.body;
+  const {
+    correo
+  } = req.body;
 
   // Configurar el transporte de correo con nodemailer
   const transporter = createTransport({
@@ -28,12 +26,10 @@ app.post('/enviar-correo', async (req, res) => {
     to: correo,
     subject: 'Archivo adjunto',
     text: 'Aquí está el archivo adjunto.',
-    attachments: [
-      {
-        filename: 'dosier.pdf',
-        content: 'Contenido del archivo'
-      }
-    ]
+    attachments: [{
+      filename: 'dosier.pdf',
+      content: 'Contenido del archivo'
+    }]
   };
 
   // Enviar el correo electrónico
@@ -46,7 +42,10 @@ app.post('/enviar-correo', async (req, res) => {
   }
 });
 
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  output: "server",
+  adapter: netlify()
 });
