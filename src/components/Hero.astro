@@ -4,11 +4,13 @@
 >
   <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
     <video
-      class="min-w-full min-h-full absolute object-cover"
+    id="video"
+      class="video-no-controls min-w-full min-h-full absolute object-cover"
       src="/parrotshero2.mp4"
       autoplay
       muted
-      loop></video>
+      loop
+      ></video>
   </div>
   <div class="video-content space-y-2 z-10">
     <img class="" src="/logo.png" />
@@ -32,4 +34,25 @@
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
+  .video-no-controls::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-no-controls::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.video-no-controls::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.video-no-controls::-webkit-media-controls-play-button {
+    display: none !important;
+}
 </style>
+
+<script>
+  var video = document.getElementById('video');
+  video.removeAttribute('controls');
+
+</script>
