@@ -1,7 +1,7 @@
 <nav
   class="cursor-example flex flex-wrap items-center justify-between fixed inset-x-0 z-50 p-3 bg-black bg-opacity-60"
 >
-  <a href="#"
+  <a href="#" title="logoico"
     ><img
       src="/loroico.png"
       class="h-10 w-10"
@@ -11,15 +11,17 @@
     /></a
   >
   <div class="flex md:hidden">
-    <button id="hamburger" class="bg-[#e3d779] rounded-lg">
+    <button id="hamburger" aria-label="menu" class="bg-[#e3d779] rounded-lg">
       <img
         class="toggle block"
         src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png"
+        alt=""
         width="40"
         height="40"
       />
       <img
         class="toggle hidden"
+        alt=""
         src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
         width="40"
         height="40"
@@ -30,22 +32,26 @@
     class="toggle hidden gap-5 w-full ml-4 md:w-auto md:flex text-center text-bold mt-5 md:mt-0"
   >
     <a
+    title="navbar"
       href="#quienes"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Quiénes somos
     </a>
     <a
+    title="navbar"
       href="#repertorio"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Qué hacemos
     </a>
     <a
+    title="navbar"
       href="#clientes"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Qué dicen
     </a>
   </div>
   <a
+  title="navbar"
     href="#contacto"
     class="toggle hidden md:flex w-full text-xl md:w-auto px-4 py-2 font-bold text-center transition-all duration-200 bg-[#e3d779] hover:bg-yellow-700 hover:text-white text-black md:rounded"
     >¡CONTÁCTANOS!
