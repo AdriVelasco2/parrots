@@ -1,0 +1,10 @@
+---
+// src/pages/temp-link.astro
+
+const token = Astro.url.searchParams.get('token')
+const response = await fetch(`http://localhost:8888/.netlify/functions/verify-token?token=${token}`);
+const message = await response.text();
+---
+
+<h1>Verificación del enlace temporal</h1>
+<p>{message}</p>
