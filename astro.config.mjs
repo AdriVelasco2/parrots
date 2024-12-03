@@ -8,5 +8,10 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
+  env: {
+    AIRTABLE_BASE_ID: import.meta.env.AIRTABLE_TOKEN,
+    AIRTABLE_TOKEN: import.meta.env.AIRTABLE_TOKEN,
+    AIRTABLE_TABLE_ID: import.meta.env.AIRTABLE_TABLE_ID
+  },
 });

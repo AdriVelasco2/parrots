@@ -10,6 +10,12 @@
       class=""
     /></a
   >
+  <button><a
+    title="navbar"
+    href="#contacto"
+    class="  border-4 border-amber-400 md:flex flex w-full text-xl md:w-auto px-4 py-2 font-bold text-center transition-all duration-200 bg-[#e3d779] hover:bg-yellow-700 hover:text-white text-black md:rounded"
+    >¡RESERVA TU FECHA!
+  </a></button>
   <div class="flex md:hidden">
     <button id="hamburger" aria-label="menu" class="bg-[#e3d779] rounded-lg">
       <img
@@ -20,6 +26,7 @@
         height="40"
       />
       <img
+        id="hide"
         class="toggle hidden"
         alt=""
         src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
@@ -29,34 +36,34 @@
     </button>
   </div>
   <div
-    class="toggle hidden gap-5 w-full ml-4 md:w-auto md:flex text-center text-bold mt-5 md:mt-0"
+    class="toggle hidden gap-5 w-full ml-4 md:w-auto md:flex text-center text-bold  md:mt-0"
   >
     <a
-    title="navbar"
+      title="navbar"
       href="#quienes"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Quiénes somos
     </a>
     <a
-    title="navbar"
+      title="navbar"
       href="#repertorio"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Qué hacemos
     </a>
     <a
-    title="navbar"
+      title="navbar"
       href="#clientes"
       class="block md:inline-block text-xl text-[#e3d779] hover:text-yellow-500 px-3 py-3"
       >Qué dicen
     </a>
   </div>
-  
-  <a
-  title="navbar"
+
+  <!-- <a
+    title="navbar"
     href="#contacto"
-    class="toggle hidden md:flex w-full text-xl md:w-auto px-4 py-2 font-bold text-center transition-all duration-200 bg-[#e3d779] hover:bg-yellow-700 hover:text-white text-black md:rounded"
-    >¡CONTÁCTANOS!
-  </a>
+    class="toggle hidden border-4 border-amber-400 md:flex w-full text-xl md:w-auto px-4 py-2 font-bold text-center transition-all duration-200 bg-[#e3d779] hover:bg-yellow-700 hover:text-white text-black md:rounded"
+    >¡RESERVA TU FECHA!
+  </a> -->
 </nav>
 <script>
   document.getElementById("hamburger").onclick = function toggleMenu() {
@@ -66,22 +73,26 @@
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     var quienesLink = document.querySelector('a[href="#quienes"]');
 
     // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-    quienesLink.addEventListener("click", function(event) {
+    quienesLink.addEventListener("click", function (event) {
       // Evitar el comportamiento predeterminado del enlace
       event.preventDefault();
 
       // Ir al inicio de la página con una animación suave
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
+      const navToggle = document.getElementsByClassName("toggle");
 
+      for (let i = 0; i < navToggle.length; i++) {
+        navToggle.item(i).classList.toggle("hidden");
+      }
       // Esperar un breve momento antes de dirigirse a la sección correspondiente
-      setTimeout(function() {
+      setTimeout(function () {
         // Obtener el href del enlace "Quiénes somos"
         var href = quienesLink.getAttribute("href");
         // Obtener el elemento correspondiente a la sección
@@ -89,28 +100,32 @@
         if (section) {
           // Ir a la sección correspondiente con una animación suave
           section.scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
     });
   });
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     var repertorioLink = document.querySelector('a[href="#repertorio"]');
 
     // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-    repertorioLink.addEventListener("click", function(event) {
+    repertorioLink.addEventListener("click", function (event) {
       // Evitar el comportamiento predeterminado del enlace
       event.preventDefault();
 
       // Ir al inicio de la página con una animación suave
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
+      const navToggle = document.getElementsByClassName("toggle");
 
+      for (let i = 0; i < navToggle.length; i++) {
+        navToggle.item(i).classList.toggle("hidden");
+      }
       // Esperar un breve momento antes de dirigirse a la sección correspondiente
-      setTimeout(function() {
+      setTimeout(function () {
         // Obtener el href del enlace "Quiénes somos"
         var href = repertorioLink.getAttribute("href");
         // Obtener el elemento correspondiente a la sección
@@ -118,28 +133,32 @@
         if (section) {
           // Ir a la sección correspondiente con una animación suave
           section.scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
     });
   });
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     var clientesLink = document.querySelector('a[href="#clientes"]');
 
     // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-    clientesLink.addEventListener("click", function(event) {
+    clientesLink.addEventListener("click", function (event) {
       // Evitar el comportamiento predeterminado del enlace
       event.preventDefault();
 
       // Ir al inicio de la página con una animación suave
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
+      const navToggle = document.getElementsByClassName("toggle");
 
+      for (let i = 0; i < navToggle.length; i++) {
+        navToggle.item(i).classList.toggle("hidden");
+      }
       // Esperar un breve momento antes de dirigirse a la sección correspondiente
-      setTimeout(function() {
+      setTimeout(function () {
         // Obtener el href del enlace "Quiénes somos"
         var href = clientesLink.getAttribute("href");
         // Obtener el elemento correspondiente a la sección
@@ -147,18 +166,52 @@
         if (section) {
           // Ir a la sección correspondiente con una animación suave
           section.scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
     });
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    var contactoLink = document.querySelector('a[href="#contacto"]');
+
+    // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
+    contactoLink.addEventListener("click", function (event) {
+      // Evitar el comportamiento predeterminado del enlace
+      event.preventDefault();
+
+      // Ir al inicio de la página con una animación suave
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      // const navToggle = document.getElementsByClassName("toggle");
+
+      // for (let i = 0; i < navToggle.length; i++) {
+      //   navToggle.item(i).classList.toggle("hidden");
+      // }
+      // Esperar un breve momento antes de dirigirse a la sección correspondiente
+      setTimeout(function () {
+        // Obtener el href del enlace "Quiénes somos"
+        var href = contactoLink.getAttribute("href");
+        // Obtener el elemento correspondiente a la sección
+        var section = document.querySelector(href);
+        if (section) {
+          // Ir a la sección correspondiente con una animación suave
+          section.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }, 500); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
+    });
+  });
 </script>
- <style>
+<style>
   .shake-left {
-	-webkit-animation: shake-left 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2s 5 both;
-	        animation: shake-left 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2s 5 both;
-}
+    -webkit-animation: shake-left 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+      2s 5 both;
+    animation: shake-left 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s 5 both;
+  }
   /* ----------------------------------------------
  * Generated by Animista on 2024-4-22 1:31:46
  * Licensed under FreeBSD License.
@@ -166,76 +219,75 @@
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-/**
+  /**
  * ----------------------------------------
  * animation shake-left
  * ----------------------------------------
  */
-@-webkit-keyframes shake-left {
-  0%,
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transform-origin: 0 50%;
-            transform-origin: 0 50%;
+  @-webkit-keyframes shake-left {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+      transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+      transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+      transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+      transform: rotate(2deg);
+    }
   }
-  10% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+  @keyframes shake-left {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+      transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+      transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+      transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+      transform: rotate(2deg);
+    }
   }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  30%,
-  50%,
-  70% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  80% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  90% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-@keyframes shake-left {
-  0%,
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transform-origin: 0 50%;
-            transform-origin: 0 50%;
-  }
-  10% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  30%,
-  50%,
-  70% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  80% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  90% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
- </style>
+</style>

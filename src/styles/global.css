@@ -1,0 +1,12 @@
+/* En tu archivo CSS */
+.date-picker-container label {
+    color: white;
+  }
+
+  
+  .date-picker-container label,
+.date-picker-container label:focus,
+.date-picker-container label:active,
+.date-picker-container label[data-shrink="true"] {
+  color: #FFFFFF !important;
+}

@@ -23,8 +23,7 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -34,7 +33,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #13151a !important;
 		background-size: 224px;
 	}
 	code {
@@ -61,5 +60,80 @@ const { title } = Astro.props;
     font-weight: 700;
     font-style: normal;
   }
+  .date-picker-container label {
+    color: white;
+  }
+  .date-picker-container label,
+.date-picker-container label:focus,
+.date-picker-container label:active,
+.date-picker-container label[data-shrink="true"] {
+  color: #e3d779 !important;
+}
+.date-picker-container input {
+  color: #FFFFFF !important;               /* Fuerza el color blanco en el texto */
+}
+
+.date-picker-container input::placeholder {
+  color: #FFFFFF !important;               /* Fuerza el color blanco en el placeholder */
+}
+.data-\[editable\=true\]\:text-foreground[data-editable=true] {
+    --tw-text-opacity: 1;
+    color: #ffffff;
+}
+.group[data-filled-within=true] .group-data-\[filled-within\=true\]\:text-default-600 {
+    --tw-text-opacity: 1;
+    color: #e3d779;
+}
+.text-foreground {
+    --tw-text-opacity: 1;
+    color: #d6c967;
+}
+.data-\[disabled\=true\]\:text-default-300[data-disabled=true] {
+    --tw-text-opacity: 1;
+    color: #e3d779 /;
+}
+.bg-default-50 { 
+    --tw-bg-opacity: 1;
+    background-color: rgb(3, 3, 3);
+}
+.bg-content1 {
+    --tw-bg-opacity: 1;
+    background-color: #e9da66;
+}
+
+.after\:bg-primary::after {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(207, 181, 66);
+}
+.text-secondary {
+    --tw-text-opacity: 1;
+    color:#e3d779;
+}
+.after\:bg-secondary::after{
+	content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(207, 181, 66);
+}
+.group[data-has-value=true] .group-data-\[has-value\=true\]\:text-default-foreground {
+    --tw-text-opacity: 1;
+    color: #FFFFFF !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white; /* Cambia el color del texto a blanco */
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset; /* Cambia el fondo, reemplaza #333 por el color deseado */
+  box-shadow: 0 0 0px 1000px #333 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.text-medium {
+    font-size: 12px;
+    line-height: var(--nextui-line-height-medium);
+}
+.bg-default-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(181, 138, 45, 1);
+}
 </style>
  
