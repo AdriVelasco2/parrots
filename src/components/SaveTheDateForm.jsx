@@ -343,7 +343,7 @@ const SaveTheDateForm = () => {
                 </div>
               </div>
 
-              <div class="my-6 grid gap-4 sm:grid-cols-2">
+              <div class="my-6 grid gap-4 ">
                 <Select
                   id="duracion"
                   name="duracion"
@@ -390,7 +390,7 @@ const SaveTheDateForm = () => {
                     3h
                   </SelectItem>
                 </Select>
-                <div className="date-picker-container">
+                {/* <div className="date-picker-container">
                   <Input
                     type="number"
                     id="budget"
@@ -411,7 +411,7 @@ const SaveTheDateForm = () => {
                       </div>
                     }
                   />
-                </div>
+                </div> */}
               </div>
 
               <div class="my-6 grid gap-4 sm:grid-cols-2">
