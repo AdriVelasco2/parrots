@@ -147,7 +147,6 @@ const SaveTheDateForm = () => {
         fldhhoUKa7stuQKcS: time,
         fldYmJPUd792AplMX: city,
         fldptbO18FDDc5XEQ: duracion,
-        fldRXjgpP75ddVjc7: budget,
         fldqdRp24u8Y5HOin: evento,
         fld1ohGjqIVHa0cWk: tlf,
         fld6DvkeHBQqNKkoN: tlfevento,
