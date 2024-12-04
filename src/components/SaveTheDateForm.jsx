@@ -86,13 +86,6 @@ const SaveTheDateForm = () => {
     }
   }, [tlfValue]);
 
-  const isInvalidBudget = React.useMemo(() => {
-    if (budgetValue === "") return false;
-    if (budgetValue <= 0) return true;
-
-    return budgetValue === "" ? true : false;
-  }, [budgetValue]);
-
   const isInvalidDate = React.useMemo(() => {
     return dateValue === "" ? true : false;
   }, [dateValue]);
@@ -114,7 +107,6 @@ const SaveTheDateForm = () => {
     const city = formData.get("city");
     const evento = formData.get("evento");
     const duracion = formData.get("duracion");
-    const budget = parseFloat(document.getElementById("budget").value);
     const tlf = formData.get("tlf");
     const tlfevento = formData.get("tlfevento");
     const email = formData.get("email");
