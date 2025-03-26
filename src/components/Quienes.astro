@@ -1,37 +1,41 @@
+---
+import Image from "astro/components/Image.astro";
+import Equipo from "../assets/equipo.jpg"; 
+---
+
 <div>
   <h1
   id="quienes"
     class="text-4xl items-center justify-center text-center mt-4 leading-10 tracking-wider text-amber-200 sm:text-5xl sm:leading-none md:text-6xl"
   >
-    QUIÉNES SOMOS
+    EQUIPO HUMANO
   </h1>
 </div>
 <div class="flex p-5 mt-2 justify-center content-center items-center w-full">
   <p
     class="text-center md:w-1/2 justify-center p-3 content-center text-sm md:text-xl text-slate-100 border-4 border-[#e3d779] rounded-lg"
   >
-    Nuestro camino empezó en 2017. Ese verano dimos nuestro primer concierto en
-    una celebración familiar y desde ahí no hemos parado. Se sumó Pedro naciendo
-    así Parrots y los tres nos recorrimos numerosos bares, campings y
-    chiringuitos de playa hasta nuestras primeras bodas tocando en acústico.
-    Ahora centrados en Parrots Club junto a Julio y Santi nos hemos pasado a lo
-    eléctrico para montar auténticos fiestones que por el momento no se nos da
-    mal.
+  Somos de los grupos más solicitados para tocar en bodas.
+  Además de ser los ganadores a uno de los mejores
+  proveedores del año según el portal Bodas.net ¿Eso
+  quiere decir algo? Posiblemente no, lo realmente
+  importante es lo que podemos aportaros en nuestro
+  directo.
   </p>
 </div>
 <div class="flex justify-center">
-  <img
-    src="/grupob.jpg"
+  <Image
+    src={Equipo}
     alt="grupo"
-    class="rounded-md w-full max-w-xs sm:max-w-md lg:max-w-lg"
+    class="rounded-md p-2 w-full max-w-2xl"
   />
 </div>
 <div class="container mx-auto my-3 flex justify-center items-center">
   <div class="border-b border-[#e3d779] p-4 rounded-lg">
     <div class="overflow-auto">
       <p class="mb-4 text-center text-lg text-balance text-slate-100">
-        Santi, Julio, Asier y Manu. <br /> De izquierda a derecha esos son los nombres
-        de los componentes de este nuestro grupo.
+        Santi, Asier, Julio, Manu y Álex. <br /> De izquierda a derecha esos son los nombres
+        de las personas que hacen posible esto.
       </p>
     </div>
   </div>

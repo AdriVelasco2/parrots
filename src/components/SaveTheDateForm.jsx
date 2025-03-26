@@ -150,7 +150,7 @@ const SaveTheDateForm = () => {
       .then((record) => {
         displayMsg();
         // console.log("Created record:", record);
-        setIsVisible(false);
+        
       })
       .catch((err) => {
         alert("Ha habido un error, la fecha no es correcta.");
@@ -433,8 +433,8 @@ const SaveTheDateForm = () => {
                       value={tlfValue}
                       onValueChange={setTlfValue}
                       isInvalid={isInvalidTlf}
-                      color={isInvalidTlf ? "danger" : "primary"}
-                      errorMessage="Introduce el prefijo"
+                      color="primary"
+                      errorMessage="Faltan números"
                     />
                   </div>
                   <div className="date-picker-container">

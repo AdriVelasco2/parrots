@@ -1,0 +1,17 @@
+---
+import LoginForm from "../components/Login.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Escoge la música que te gusta">
+    <div class="relative h-screen bg-contain bg-center" style="background-image: url('/thanks.jpg');">
+      <!-- Overlay oscurecido -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      
+      <!-- Contenido -->
+      <div class="relative z-10">
+        <LoginForm/>
+      </div>
+    </div>
+  </Layout>
