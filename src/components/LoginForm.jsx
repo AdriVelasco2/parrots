@@ -1,7 +1,6 @@
 import React, { useState, } from 'react';
 import Airtable from 'airtable';
 import { ToastContainer, toast, Bounce, Slide } from "react-toastify";
-import GenreAccordion from './Music';
 import Countdown from './Countdown';
 import genres from "../data/music.json"; // Importamos el JSON
 import ScrollingSections from './SliderComponent';
