@@ -61,7 +61,7 @@ const LoginForm = () => {
         const duracion = pareja['Duración'];
 
         
-        console.log("Campos de la respuesta de Airtable:", pareja);
+        // console.log("Campos de la respuesta de Airtable:", pareja);
         sessionStorage.setItem('nombres', nombres);
       sessionStorage.setItem('fecha', pareja.Fecha);
       sessionStorage.setItem('ciudad', pareja['Lugar del evento']);

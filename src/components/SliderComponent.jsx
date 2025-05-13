@@ -27,31 +27,31 @@ const ScrollingSections = () => {
     // Si los valores existen en sessionStorage, los seteamos en el estado
     if (nombres) {
       setNombres(nombres);
-      console.log("Nombre recuperado de sessionStorage:", nombres); // Asegúrate de que el valor esté presente
+      // console.log("Nombre recuperado de sessionStorage:", nombres); // Asegúrate de que el valor esté presente
     } else {
-      console.log("No se encontraron datos de 'nombres' en sessionStorage.");
+      // console.log("No se encontraron datos de 'nombres' en sessionStorage.");
     }
 
     if (fecha) {
       setFecha(fecha);
-      console.log("Fecha recuperada de sessionStorage:", fecha);
+      // console.log("Fecha recuperada de sessionStorage:", fecha);
     }
 
     if (ciudad) {
       setCiudad(ciudad);
-      console.log("Ciudad recuperada de sessionStorage:", ciudad);
+      // console.log("Ciudad recuperada de sessionStorage:", ciudad);
     }
 
     if (hora) {
-      console.log("Hora recuperada de sessionStorage:", hora);
+      // console.log("Hora recuperada de sessionStorage:", hora);
     }
     if (email) {
       setEmail(email);
-      console.log("CORREO recuperada de sessionStorage:", email);
+      // console.log("CORREO recuperada de sessionStorage:", email);
     }
     if (duracion) {
       setDuracion(duracion);
-      console.log("Duración recuperada de sessionStorage:", duracion);
+      // console.log("Duración recuperada de sessionStorage:", duracion);
     }
   }, []);
 

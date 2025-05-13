@@ -85,8 +85,8 @@ const displayMsg = () => {
       })
       .firstPage((err, records) => {
         if (err) {
-          console.error("Error al buscar el registro:", err);
-          alert("Error al buscar el usuario en la base de datos.");
+          // console.error("Error al buscar el registro:", err);
+          // alert("Error al buscar el usuario en la base de datos.");
           return;
         }
 
@@ -109,8 +109,8 @@ const displayMsg = () => {
           setTimeout(() => window.location.href = '/AreaClub', 9000);
           })
           .catch((err) => {
-            console.error("Error al actualizar el registro:", err);
-            alert("Error al actualizar los bloques.");
+            // console.error("Error al actualizar el registro:", err);
+            // alert("Error al actualizar los bloques.");
           });
       });
   };

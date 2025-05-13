@@ -155,7 +155,7 @@ const SaveTheDateForm = () => {
       .catch((err) => {
         alert("Ha habido un error, la fecha no es correcta.");
 
-        console.error("Error creating record:", err);
+        // console.error("Error creating record:", err);
       });
   };
 
@@ -185,7 +185,7 @@ const SaveTheDateForm = () => {
             </h1>
             <div className="mt-4 text-center text-white">
               <h2>
-                Déjanos tu prereserva y te contactaremos tras evaluar tu
+                Pre-reserva y os contactaremos tras evaluar vuestra
                 petición.
               </h2>
             </div>
@@ -202,7 +202,7 @@ const SaveTheDateForm = () => {
                       type="text"
                       id="name"
                       name="name"
-                      label="Vuestros nombres"
+                      label="Vuestro nombre y apellidos"
                       labelClassName="text-white"
                       isRequired
                       minLength="5"
@@ -277,7 +277,7 @@ const SaveTheDateForm = () => {
                     type="time"
                     id="time"
                     name="time"
-                    label="Hora del evento"
+                    label="¿A qué hora queréis que toquemos?"
                     variant="faded"
                     labelPlacement="outside"
                     isRequired
@@ -368,7 +368,7 @@ const SaveTheDateForm = () => {
                     onChange={(e) => {
                       const selectedValue = e.target.value;
                       setDuraValue(selectedValue); // Actualiza el valor seleccionado
-                      console.log("Duración seleccionada:", selectedValue); // Imprime el valor seleccionado
+                      // console.log("Duración seleccionada:", selectedValue); // Imprime el valor seleccionado
                     }}
                     isInvalid={isInvalidDura}
                     color={isInvalidDura ? "danger" : "secondary"}

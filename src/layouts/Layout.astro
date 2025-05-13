@@ -1,9 +1,9 @@
 ---
-interface Props {
-	title: string;
-}
+// interface Props {
+// 	title: string;
+// }
 
-const { title } = Astro.props;
+// const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +14,10 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/loroico.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+    <meta property="og:title" content="Parrots - Grupo de música para bodas" />
+  <meta property="og:description" content="Música en vivo para bodas y celebraciones en Asturias y España." />
+		<title>Parrots Club | Grupo de música para bodas</title>
+  <meta name="description" content="Parrots es un grupo de música en vivo especializado en bodas, principalmente en Asturias, celebraciones y eventos especiales. Música inolvidable para tu día perfecto." />
 	</head>
 	<body>
 		<slot />
@@ -136,4 +139,35 @@ input:-webkit-autofill:focus {
     background-color: rgba(181, 138, 45, 1);
 }
 </style>
- 
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Parrots Club",
+  "description": "Parrots es un grupo y banda de música especializado en bodas y eventos privados. Estamos en Asturias, pero nos desplazamos a cualquier parte de España si fuese necesario. Contamos con un repertorio variado y adaptado a cada evento.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Asturias",
+    "addressCountry": "España"
+  },
+  "url": "https://www.losparrotsclub.com/",
+  "image": "https://www.losparrotsclub.com/logo.png",
+  "sameAs": [
+    "https://instagram.com/losparrotsclub",
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Asier",
+      "@type": "Person",
+      "name": "Manu",
+      "@type": "Person",
+      "name": "Santi",
+      "@type": "Person",
+      "name": "Vega",
+      "@type": "Person",
+      "name": "Julio"
+    }
+  ]
+}
+</script>
