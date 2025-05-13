@@ -2,13 +2,22 @@
 // interface Props {
 // 	title: string;
 // }
-
+const analyticsId = 'G-X948P42KJ9'; // reemplazá con tu ID
 // const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X948P42KJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${analyticsId}');
+</script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Los parrots club" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,6 +28,7 @@
 		<title>Parrots Club | Grupo de música para bodas</title>
   <meta name="description" content="Parrots es un grupo de música en vivo especializado en bodas, principalmente en Asturias, celebraciones y eventos especiales. Música inolvidable para tu día perfecto." />
 	</head>
+  
 	<body>
 		<slot />
 	</body>
