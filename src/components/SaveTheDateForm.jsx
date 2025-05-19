@@ -189,7 +189,7 @@ const SaveTheDateForm = () => {
                 petición.
               </h2>
             </div>
-            <form id="nameForm" onSubmit={handleSubmit}>
+            <form id="nameForm" onSubmit={handleSubmit} netlify>
               <div className="p-8">
                 <div className="grid gap-4 sm:grid-cols-2 ">
                   <div className="date-picker-container">
