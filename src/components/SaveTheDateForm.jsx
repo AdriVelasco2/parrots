@@ -185,8 +185,7 @@ const SaveTheDateForm = () => {
             </h1>
             <div className="mt-4 text-center text-white">
               <h2>
-                Pre-reserva y os contactaremos tras evaluar vuestra
-                petición.
+                Dejadnos vuestra prerreserva y os contactaremos🎸
               </h2>
             </div>
             <form id="nameForm" onSubmit={handleSubmit} netlify>
@@ -347,7 +346,7 @@ const SaveTheDateForm = () => {
                       errorMessage="El nombre ha de contener 4 caracteres al menos"
                     />
                   </div>
-                </div>
+                </div>  
 
                 <div className="my-6 grid gap-4 ">
                   <Select
