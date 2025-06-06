@@ -1,0 +1,60 @@
+---
+import { createClient } from '@supabase/supabase-js'
+import Layout from '../layouts/Layout.astro'
+const supabase = createClient(
+  import.meta.env.PUBLIC_SUPABASE_URL,
+  import.meta.env.PUBLIC_SUPABASE_KEY
+)
+const { data: Prerreservas, error } = await supabase
+  .from('Prerreservas')
+  .select('nombres, email, telefono, aprobacion')
+
+if (error) {
+  throw new Error('Error al obtener los datos de Supabase: ' + error.message)
+}
+
+const headers = ['Nombre', 'Email', 'Teléfono', 'Estado']
+const fields = ['nombres', 'email', 'telefono', 'aprobacion']
+---
+
+<Layout>
+  <html>
+  <head>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Spline+Sans:wght@400;500;700&display=swap" />
+    <title>Clientes</title>
+  </head>
+  <body class="bg-[#f9fcf8] font-['Spline Sans','Noto Sans',sans-serif]">
+    
+    <main class="px-40 py-10">
+      <h1 class="text-3xl font-bold text-[#101b0e] mb-6">Clientes</h1>
+      <div class="overflow-hidden rounded-xl border border-[#d4e7d0] bg-white">
+        <table class="min-w-full divide-y divide-[#d4e7d0]">
+          <thead class="bg-[#f9fcf8]">
+            <tr>
+              {headers.map(header => (
+                <th class="px-6 py-3 text-left text-sm font-medium text-[#101b0e]">{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-[#d4e7d0]">
+            {Prerreservas.map(item => (
+              <tr>
+                {fields.map(field => (
+                  <td class="px-6 py-4 text-sm text-[#101b0e]">
+                    {field === 'aprobacion' ? (
+                      <button class="bg-[#e9f3e7] text-[#101b0e] rounded-xl h-8 px-4 text-sm font-medium">
+                        {item[field]}
+                      </button>
+                    ) : item[field]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
+</Layout>
