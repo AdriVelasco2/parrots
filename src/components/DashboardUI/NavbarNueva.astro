@@ -1,8 +1,8 @@
-  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-50">
+  <nav class="fixed top-0 inset-x-0 left-0 w-full z-50 bg-black bg-opacity-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20">
       <div class="flex items-center">
-        <a href="#" class="flex-shrink-0 flex items-center">
+        <a href="#inicio" class="flex-shrink-0 flex items-center">
           <img
             src="/loroico.png"
             class="h-10 w-10 shake-left"
@@ -135,7 +135,7 @@
       </div>
     </div>
   </div>
-</nav>
+
   <script>
 document.getElementById("hamburger").onclick = function toggleMenu() {
     const navToggle = document.getElementsByClassName("toggle");
@@ -153,139 +153,31 @@ document.getElementById("hamburger").onclick = function toggleMenu() {
         this.setAttribute("aria-expanded", !isExpanded);
         mobileMenu.classList.toggle("hidden");
       });
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('a[href^="#"]');
 
-    document.addEventListener("DOMContentLoaded", function () {
-      var quienesLink = document.querySelector('a[href="#quienes"]');
+  links.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const href = this.getAttribute("href");
 
-      // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-      quienesLink.addEventListener("click", function (event) {
-        // Evitar el comportamiento predeterminado del enlace
-        event.preventDefault();
+      // Siempre sube al top
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
-        // Ir al inicio de la página con una animación suave
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        const navToggle = document.getElementsByClassName("toggle");
-
-        for (let i = 0; i < navToggle.length; i++) {
-          navToggle.item(i).classList.toggle("hidden");
+      // Si no es #inicio, espera a que llegue arriba y luego va a la sección
+      if (href !== "#inicio") {
+        const section = document.querySelector(href);
+        if (section) {
+          setTimeout(() => {
+            section.scrollIntoView({ behavior: "smooth" });
+          }, 400); // Ajusta este tiempo si el scroll es muy lento o rápido
         }
-        // Esperar un breve momento antes de dirigirse a la sección correspondiente
-        setTimeout(function () {
-          // Obtener el href del enlace "Quiénes somos"
-          var href = quienesLink.getAttribute("href");
-          // Obtener el elemento correspondiente a la sección
-          var section = document.querySelector(href);
-          if (section) {
-            // Ir a la sección correspondiente con una animación suave
-            section.scrollIntoView({
-              behavior: "smooth",
-            });
-          }
-        }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
-      });
+      }
     });
-    document.addEventListener("DOMContentLoaded", function () {
-      var repertorioLink = document.querySelector('a[href="#repertorio"]');
+  });
+});
 
-      // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-      repertorioLink.addEventListener("click", function (event) {
-        // Evitar el comportamiento predeterminado del enlace
-        event.preventDefault();
 
-        // Ir al inicio de la página con una animación suave
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        const navToggle = document.getElementsByClassName("toggle");
-
-        for (let i = 0; i < navToggle.length; i++) {
-          navToggle.item(i).classList.toggle("hidden");
-        }
-        // Esperar un breve momento antes de dirigirse a la sección correspondiente
-        setTimeout(function () {
-          // Obtener el href del enlace "Quiénes somos"
-          var href = repertorioLink.getAttribute("href");
-          // Obtener el elemento correspondiente a la sección
-          var section = document.querySelector(href);
-          if (section) {
-            // Ir a la sección correspondiente con una animación suave
-            section.scrollIntoView({
-              behavior: "smooth",
-            });
-          }
-        }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      var clientesLink = document.querySelector('a[href="#clientes"]');
-
-      // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-      clientesLink.addEventListener("click", function (event) {
-        // Evitar el comportamiento predeterminado del enlace
-        event.preventDefault();
-
-        // Ir al inicio de la página con una animación suave
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        const navToggle = document.getElementsByClassName("toggle");
-
-        for (let i = 0; i < navToggle.length; i++) {
-          navToggle.item(i).classList.toggle("hidden");
-        }
-        // Esperar un breve momento antes de dirigirse a la sección correspondiente
-        setTimeout(function () {
-          // Obtener el href del enlace "Quiénes somos"
-          var href = clientesLink.getAttribute("href");
-          // Obtener el elemento correspondiente a la sección
-          var section = document.querySelector(href);
-          if (section) {
-            // Ir a la sección correspondiente con una animación suave
-            section.scrollIntoView({
-              behavior: "smooth",
-            });
-          }
-        }, 1000); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      var contactoLink = document.querySelector('a[href="#contacto"]');
-
-      // Agregar event listener para el evento de clic en el enlace "Quiénes somos"
-      contactoLink.addEventListener("click", function (event) {
-        // Evitar el comportamiento predeterminado del enlace
-        event.preventDefault();
-
-        // Ir al inicio de la página con una animación suave
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        // const navToggle = document.getElementsByClassName("toggle");
-
-        // for (let i = 0; i < navToggle.length; i++) {
-        //   navToggle.item(i).classList.toggle("hidden");
-        // }
-        // Esperar un breve momento antes de dirigirse a la sección correspondiente
-        setTimeout(function () {
-          // Obtener el href del enlace "Quiénes somos"
-          var href = contactoLink.getAttribute("href");
-          // Obtener el elemento correspondiente a la sección
-          var section = document.querySelector(href);
-          if (section) {
-            // Ir a la sección correspondiente con una animación suave
-            section.scrollIntoView({
-              behavior: "smooth",
-            });
-          }
-        }, 500); // Esperar 1 segundo antes de dirigirse a la sección correspondiente
-      });
-    });
   </script>
   <style>
     .shake-left {
@@ -374,3 +266,4 @@ document.getElementById("hamburger").onclick = function toggleMenu() {
     }
   </style>
 
+</nav>
