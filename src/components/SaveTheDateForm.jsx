@@ -149,6 +149,7 @@ const SaveTheDateForm = () => {
       })
       .then((record) => {
         displayMsg();
+        setIsVisible(false)
         // console.log("Created record:", record);
         
       })
