@@ -125,6 +125,7 @@ const SaveTheDateForm = () => {
     const valoracion = parseFloat(document.getElementById("valoracion").value);
     const feed = formData.get("feed");
     const fechaISO = formData.get("date");
+    const conocieron = formData.get("conocieron");
     const fechaObj = new Date(fechaISO);
 
     const base = new Airtable({
@@ -146,6 +147,7 @@ const SaveTheDateForm = () => {
         fldckYyf3pEZYQGQv: music,
         fldQbQawI44b56g5l: feed,
         fldwOX55PL7u85m7y: valoracion,
+        fldsMd7rd9bBn86Bm: conocieron,
       })
       .then((record) => {
         displayMsg();
@@ -463,9 +465,9 @@ const SaveTheDateForm = () => {
                     />
                   </div>
                   <Select
-                    id="music"
-                    name="music"
-                    label="Selecciona la música deseada"
+                    id="conocieron"
+                    name="conocieron"
+                    label="Dinos cómo nos conocisteis"
                     variant="underlined"
                     isRequired
                     color="secondary"
@@ -477,17 +479,29 @@ const SaveTheDateForm = () => {
                       input: "text-white",
                     }}
                   >
-                    <SelectItem value="80s" key="80s">
-                      Música de los 80
+                    <SelectItem value="Bodas.net" key="Bodas.net">
+                      Bodas.net
                     </SelectItem>
-                    <SelectItem value="00s-actualidad" key="00s-actualidad">
-                      Los 2000 y actualidad
+                    <SelectItem value="Instagram/Redes Sociales" key="Instagram/Redes Sociales">
+                      Instagram/Redes Sociales
                     </SelectItem>
                     <SelectItem
-                      value="Mix 80s y 00s-actualidad"
-                      key="Mix 80s y 00s-actualidad"
+                      value="Recomendados"
+                      key="Recomendados"
                     >
-                      Mix de ambas
+                      Recomendados
+                    </SelectItem>
+                    <SelectItem
+                      value="Nos habéis visto en persona"
+                      key="Nos habéis visto en persona"
+                    >
+                      Nos habéis visto en persona
+                    </SelectItem>
+                    <SelectItem
+                      value="Casualidad"
+                      key="Casualidad"
+                    >
+                      Casualidad
                     </SelectItem>
                   </Select>
                 </div>
