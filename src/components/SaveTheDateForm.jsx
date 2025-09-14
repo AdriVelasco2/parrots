@@ -155,7 +155,7 @@ const SaveTheDateForm = () => {
         
       })
       .catch((err) => {
-        alert("Ha habido un error al enviar el formulario.");
+        alert("Ha habido un error al enviar el formulario, por favor, refresca la página e inténtalo de nuevo. Si el error persiste, contacta con nosotros en el 680881347.");
 
         // console.error("Error creating record:", err);
       });
