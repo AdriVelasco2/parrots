@@ -121,7 +121,7 @@ const SaveTheDateForm = () => {
     const tlfevento = formData.get("tlfevento");
     const email = formData.get("email");
     const invite = parseFloat(document.getElementById("invite").value);
-    const music = formData.get("music");
+    
     const valoracion = parseFloat(document.getElementById("valoracion").value);
     const feed = formData.get("feed");
     const fechaISO = formData.get("date");
