@@ -144,7 +144,6 @@ const SaveTheDateForm = () => {
         fld6DvkeHBQqNKkoN: tlfevento,
         fldL1aEgyMIZs1iAd: email,
         fldVAPLZb2qCb2s5P: invite,
-        fldckYyf3pEZYQGQv: music,
         fldQbQawI44b56g5l: feed,
         fldwOX55PL7u85m7y: valoracion,
         fldsMd7rd9bBn86Bm: conocieron,
@@ -156,7 +155,7 @@ const SaveTheDateForm = () => {
         
       })
       .catch((err) => {
-        alert("Ha habido un error, la fecha no es correcta.");
+        alert("Ha habido un error al enviar el formulario.");
 
         // console.error("Error creating record:", err);
       });
