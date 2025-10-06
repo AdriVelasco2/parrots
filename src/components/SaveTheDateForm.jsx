@@ -125,8 +125,7 @@ const SaveTheDateForm = () => {
     const valoracion = parseFloat(document.getElementById("valoracion").value);
     const feed = formData.get("feed");
     const fechaISO = formData.get("date");
-    const conocieron = formData.get("conocieron");
-    const fechaObj = new Date(fechaISO);
+     const fechaObj = new Date(fechaISO);
 
     const base = new Airtable({
       apiKey:
@@ -146,8 +145,7 @@ const SaveTheDateForm = () => {
         fldVAPLZb2qCb2s5P: invite,
         fldQbQawI44b56g5l: feed,
         fldwOX55PL7u85m7y: valoracion,
-        fldsMd7rd9bBn86Bm: conocieron,
-      })
+       })
       .then((record) => {
         displayMsg();
         setIsVisible(false)
@@ -156,7 +154,7 @@ const SaveTheDateForm = () => {
       })
       .catch((err) => {
         alert("Ha habido un error al enviar el formulario, por favor, refresca la página e inténtalo de nuevo. Si el error persiste, contacta con nosotros en el 680881347.");
-
+        console.log(JSON.stringify(name, date, time, city, evento, duracion, tlf, tlfevento, email, invite, valoracion, feed));
         // console.error("Error creating record:", err);
       });
   };
