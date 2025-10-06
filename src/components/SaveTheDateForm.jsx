@@ -153,8 +153,8 @@ const SaveTheDateForm = () => {
         
       })
       .catch((err) => {
-        alert("Ha habido un error al enviar el formulario, por favor, refresca la página e inténtalo de nuevo. Si el error persiste, contacta con nosotros en el 680881347.");
-        console.log(JSON.stringify(name, date, time, city, evento, duracion, tlf, tlfevento, email, invite, valoracion, feed));
+        alert("Ha habido un error en el envío debido a los bloqueos que realiza Javier Tebas contra Cloudflare. Refresca la página e inténtalo de nuevo, si persiste el error contacta con nosotros en el 680881347.");
+
         // console.error("Error creating record:", err);
       });
   };
