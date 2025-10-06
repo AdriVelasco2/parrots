@@ -483,8 +483,8 @@ const SaveTheDateForm = () => {
                     <SelectItem value="Bodas.net" key="Bodas.net">
                       Bodas.net
                     </SelectItem>
-                    <SelectItem value="Instagram/Redes Sociales" key="Instagram/Redes Sociales">
-                      Instagram/Redes Sociales
+                    <SelectItem value="Instagram" key="Instagram">
+                      Instagram
                     </SelectItem>
                     <SelectItem
                       value="Recomendados"
