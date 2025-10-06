@@ -125,6 +125,8 @@ const SaveTheDateForm = () => {
     const valoracion = parseFloat(document.getElementById("valoracion").value);
     const feed = formData.get("feed");
     const fechaISO = formData.get("date");
+    const conocieron = formData.get("conocieron");
+
      const fechaObj = new Date(fechaISO);
 
     const base = new Airtable({
@@ -145,6 +147,8 @@ const SaveTheDateForm = () => {
         fldVAPLZb2qCb2s5P: invite,
         fldQbQawI44b56g5l: feed,
         fldwOX55PL7u85m7y: valoracion,
+        fldsMd7rd9bBn86Bm: conocieron,
+
        })
       .then((record) => {
         displayMsg();
